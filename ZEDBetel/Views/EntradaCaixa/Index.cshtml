@@ -1,0 +1,142 @@
+﻿@model IEnumerable<VwTabEntradaCaixaVO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Usuário logado: [@ViewBag.UsuarioLogado.Codigo - @ViewBag.UsuarioLogado.Nome] - [@ViewBag.UsuarioLogado.CodigoEmpresa - @ViewBag.UsuarioLogado.NomeFantasia]</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorEntrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataEntrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoEventoReferencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventoReferencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoMembro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeMembro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnderecoMunicipioMembro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnderecoUFMembro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoTipoEntradaCaixa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEntradaCaixa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoUsuarioCadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeUsuarioCadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeEmpresarial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnderecoMunicipioEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnderecoUFEmpresa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorEntrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataEntrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataCadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoEventoReferencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventoReferencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoMembro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeMembro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnderecoMunicipioMembro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnderecoUFMembro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoTipoEntradaCaixa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEntradaCaixa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoUsuarioCadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeUsuarioCadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeEmpresarial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnderecoMunicipioEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnderecoUFEmpresa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Codigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Codigo })
+        </td>
+    </tr>
+}
+
+</table>

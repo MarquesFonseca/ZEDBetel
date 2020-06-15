@@ -1,0 +1,61 @@
+﻿@using WebHelpers.Mvc5
+<aside class="main-sidebar">
+    <section class="sidebar">
+        @* BEGIN Search *@
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        @* END Search *@
+        @* BEGIN Menu *@
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">HEADER</li>
+            <li class="@Url.IsLinkActive("Index", "Home")">
+                <a href="@Url.Action("Index", "Home")"><i class="fa fa-link"></i> <span>Home</span></a>
+            </li>
+            <li class="@Url.IsLinkActive("Index", "Empresa")">
+                <a href="@Url.Action("Index", "Empresa")"><i class="fa fa-link"></i> <span>Empresas</span></a>
+            </li>
+            <li class="@Url.IsLinkActive("Index", "Usuario")">
+                <a href="@Url.Action("Index", "Usuario")"><i class="fa fa-link"></i> <span>Usuários</span></a>
+            </li>
+            <li class="@Url.IsLinkActive("Index", "Membro")">
+                <a href="@Url.Action("Index", "Membro")"><i class="fa fa-link"></i> <span>Membros</span></a>
+            </li>
+            <li class="@Url.IsLinkActive("Index", "EventoReferencia")">
+                <a href="@Url.Action("Index", "EventoReferencia")"><i class="fa fa-link"></i> <span>Evento referência</span></a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-link"></i> <span>Entradas</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Index", "TipoEntradaCaixa")">Tipo de entradas no caixa</a></li>
+                    <li><a href="@Url.Action("Index", "EntradaCaixa")">Entrada no caixa</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-link"></i> <span>Saídas</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Index", "TipoSaidaCaixa")">Tipo de saída no caixa</a></li>
+                    <li><a href="@Url.Action("Index", "SaidaCaixa")">Saída no caixa</a></li>
+                </ul>
+            </li>
+        </ul>
+        @* END Menu *@
+    </section>
+</aside>

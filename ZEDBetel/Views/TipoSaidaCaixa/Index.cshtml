@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TabTipoSaidaCaixaVO>
+
+@{
+    ViewBag.Title = "Tipo Saída Caixa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Usuário logado: [@ViewBag.UsuarioLogado.Codigo - @ViewBag.UsuarioLogado.Nome] - [@ViewBag.UsuarioLogado.CodigoEmpresa - @ViewBag.UsuarioLogado.NomeFantasia]</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoUsuarioCadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoUsuarioCadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataCadastro)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Codigo }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Codigo })
+        </td>
+    </tr>
+}
+
+</table>

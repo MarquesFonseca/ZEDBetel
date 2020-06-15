@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TabTipoEntradaCaixaVO>
+
+@{
+    ViewBag.Title = "Tipo Entrada Caixa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Usuário logado: [@ViewBag.UsuarioLogado.Codigo - @ViewBag.UsuarioLogado.Nome] - [@ViewBag.UsuarioLogado.CodigoEmpresa - @ViewBag.UsuarioLogado.NomeFantasia]</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Responsive tables
+            </header>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Codigo)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Descricao)
+                            </th>
+                            <th><i class="icon_cogs"></i> Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Codigo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Descricao)
+                                </td>
+                                @*<td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary" href=@Html.ActionLink("Edit", "Marques", new {  id=item.Codigo  })><i class="icon_plus_alt2"></i></a>
+                                            <a class="btn btn-success" href=@Html.ActionLink("Edit", "Marques", new {  id=item.Codigo  })><i class="icon_check_alt2"></i></a>
+                                            <a class="btn btn-danger" href=@Html.ActionLink("Delete", "Marques", new { id=item.Codigo })><i class="icon_close_alt2"></i></a>
+                                        </div>
+                                    </td>*@
+                                <td>
+                                    @Html.ActionLink("Editar", "Edit", new { id = item.Codigo }) |
+                                    @Html.ActionLink("Detalhes", "Details", new { id = item.Codigo }) |
+                                    @Html.ActionLink("Remover", "Delete", new { id = item.Codigo })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </div>
+</div>

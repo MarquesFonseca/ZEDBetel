@@ -1,0 +1,155 @@
+﻿@model TabMembroVO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TabMembroVO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoUsuarioCadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoUsuarioCadastro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoLogradouro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoLogradouro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoNumero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoNumero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoComplemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoComplemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoCEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoCEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoBairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoBairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoMunicipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoMunicipio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoUF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoUF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoEletronico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoEletronico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contato2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contato2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCadastro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

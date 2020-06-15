@@ -1,0 +1,67 @@
+﻿@model VwTabEmpresaVO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VwTabEmpresaVO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroInscricaoCNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroInscricaoCNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeEmpresarial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeEmpresarial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoMunicipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoMunicipio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnderecoUF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoUF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeResponsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeResponsavel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
