@@ -1,0 +1,8 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ZEDBetel/config/applicationhost.config
+/.vs/ZEDBetel/v16/.suo
+/ZEDBetel/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttributes.cs
+/ZEDBetel/obj/Debug/AdminZEDBetel.csproj.AssemblyReference.cache

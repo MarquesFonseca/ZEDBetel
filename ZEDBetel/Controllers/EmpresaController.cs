@@ -29,6 +29,7 @@ namespace ZEDBetel.Controllers
             DataTable Dt = BO.FindBy_Codigo(id).Tables[0];
             VwTabEmpresaVO tabEmpresaVO = ClassesDiversas.ConvertDataTable<VwTabEmpresaVO>(Dt).FirstOrDefault();
             ModelState.Clear();
+            
             return View(tabEmpresaVO);
         }
 
